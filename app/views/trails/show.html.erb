@@ -18,7 +18,7 @@
 <p>
   <strong>GPS</strong>
   <% if @trail.has_geo? %>
-	  <%= "#{@trail.lat}, #{@trail.long}" %>
+	  <%= "#{@trail.lat}, #{@trail.lng}" %>
   <% else %>
 	  No geo
   <% end %>
