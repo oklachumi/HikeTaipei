@@ -4,6 +4,6 @@ class Trail < ActiveRecord::Base
   acts_as_mappable
 
   def has_geo?
-    !lat.nil? && !long.nil?
+    !lat.nil? && !lng.nil?
   end
 end
