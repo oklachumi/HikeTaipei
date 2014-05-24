@@ -21,8 +21,7 @@ app = angular.module 'HikeTaipei', [
   "mobile-angular-ui"
 ]
 
-app.$inject = ['$routeProvider']
-
-app.config ($routeProvider) ->
+app.config ['$routeProvider', ($routeProvider) ->
   $routeProvider.when '/', templateUrl: "<%= asset_path("home.html") %>"
   $routeProvider.when '/about', templateUrl: "<%= asset_path("about.html") %>"
+]
