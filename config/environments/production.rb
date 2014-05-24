@@ -59,15 +59,7 @@ HikeTaipei::Application.configure do
 
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-  config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
   config.assets.precompile += %w( backend.js backend.css )
-  config.assets.precompile.push << Proc.new do |path|
-    File.extname(path).in? [
-      '.html', '.erb', '.haml',                 # Templates
-      '.png',  '.gif', '.jpg', '.jpeg', '.svg', # Images
-      '.eot',  '.otf', '.svc', '.woff', '.ttf', # Fonts
-    ]
-  end
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
