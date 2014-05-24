@@ -15,13 +15,17 @@
 #= require angular
 #= require angular-route
 #= require mobile-angular-ui/dist/js/mobile-angular-ui
+#= require ./api
+#= require ./home_controllers
 
 app = angular.module 'HikeTaipei', [
   "ngRoute"
   "mobile-angular-ui"
+  "api"
+  "homeControllers"
 ]
 
 app.config ['$routeProvider', ($routeProvider) ->
-  $routeProvider.when '/', templateUrl: "<%= asset_path("home.html") %>"
+  $routeProvider.when '/', templateUrl: "<%= asset_path("home.html") %>" , controller: 'HomeCtrl'
   $routeProvider.when '/about', templateUrl: "<%= asset_path("about.html") %>"
 ]
