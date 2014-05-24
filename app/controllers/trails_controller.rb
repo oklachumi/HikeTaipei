@@ -4,7 +4,13 @@ class TrailsController < BackendController
   # GET /trails
   # GET /trails.json
   def index
+    lat = params[:lat]
+    lng = params[:lng]
+
     @trails = Trail.all
+    if lat && lng
+      @trails = @trails.sort_by{|t| t.distance_to([lat, lng])}
+    end
   end
 
   # GET /trails/1
