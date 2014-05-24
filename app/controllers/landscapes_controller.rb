@@ -73,6 +73,6 @@ class LandscapesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def landscape_params
-      params.require(:landscape).permit(:title, :description, :photo)
+      params.require(:landscape).permit(:title, :description, :photo, :lat, :long)
     end
 end

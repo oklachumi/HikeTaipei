@@ -15,6 +15,15 @@
   <%= @trail.location %>
 </p>
 
+<p>
+  <strong>GPS</strong>
+  <% if @trail.has_geo? %>
+	  <%= "#{@trail.lat}, #{@trail.long}" %>
+  <% else %>
+	  No geo
+  <% end %>
+</p>
+
 <%= link_to 'Landsacpe list', trail_landscapes_path(@trail) %>
 <br />
 <%= link_to 'Edit', edit_trail_path(@trail) %> |
