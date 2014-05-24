@@ -24,6 +24,15 @@
   <% end %>
 </p>
 
+<p>
+  <strong>Reference</strong>
+  <% if @trail.reference_link %>
+	<%= link_to @trail.reference_link, @trail.reference_link %>
+  <% else %>
+	No link now
+  <% end %>
+</p>
+
 <%= link_to 'Landsacpe list', trail_landscapes_path(@trail) %>
 <br />
 <%= link_to 'Edit', edit_trail_path(@trail) %> |
