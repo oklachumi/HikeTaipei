@@ -25,11 +25,11 @@
   </div>
   <div class="field">
     <%= f.label :lat %><br>
-    <%= f.number_field :lat %>
+    <%= f.number_field :lat, step: 'any' %>
   </div>
   <div class="field">
     <%= f.label :long %><br>
-    <%= f.number_field :long %>
+    <%= f.number_field :long, step: 'any' %>
   </div>
   <div class="actions">
     <%= f.submit %>
