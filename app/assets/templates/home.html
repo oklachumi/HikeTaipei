@@ -2,11 +2,22 @@
   <div class="scrollable-content">
 
     <div class="list-group">
-      <div class="list-group-item" ng-repeat="trail in trails">
-        <h1>Welcome<br/>
-          <small>Hello {{trail.name}}</small>
-        </h1>
-      </div>
+      <a href="#/trails/{{trail.id}}"
+        class="list-group-item"
+        ng-repeat="trail in trails" style="height: 100px; overflow:hidden">
+
+        <i class="fa fa-chevron-right pull-right"
+          style="line-height:80px; padding-left:5px"></i>
+        <div class="pull-right" ng-if="trail.landscapes.length > 0"
+          style="width:80px; height:80px; overflow: hidden;">
+          <img ng-src="{{trail.landscapes[0].photo}}"
+            style="min-height: 80px; min-width: 80px;" />
+        </div>
+
+        <h3>{{trail.name}}</h3>
+        {{trail.location}}<br>
+        {{trail.introduction | characters: 50}}
+      </a>
     </div>
   </div>
 </div>

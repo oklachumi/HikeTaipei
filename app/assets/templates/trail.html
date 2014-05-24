@@ -1,0 +1,26 @@
+<div content-for="backButton">
+  <div class="btn btn-navbar" ng-click="backToHome()">
+    <i class="fa fa-chevron-left"></i> Back
+  </div>
+</div>
+
+<div class="scrollable">
+  <div class="scrollable-content">
+    <div class="list-group">
+      <div class="list-group-item" ng-repeat="landscape in trail.landscapes"
+        style="padding: 0">
+        <img ng-src="{{landscape.photo}}" style="min-width: 100%; height: auto;" />
+      </div>
+
+      <div class="list-group-item">
+        <h3>{{trail.name}}</h3>
+        <p>
+          {{trail.location}}
+        </p>
+        <p>
+          {{trail.introduction}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

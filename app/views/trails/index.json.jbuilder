@@ -1,4 +1,7 @@
 json.array!(@trails) do |trail|
   json.extract! trail, :id, :name, :introduction, :location
-  json.url trail_url(trail, format: :json)
+  json.landscapes trail.landscapes do |l|
+    json.extract! l, :id, :title, :description
+    json.photo l.photo.url
+  end
 end

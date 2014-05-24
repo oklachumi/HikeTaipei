@@ -5,5 +5,5 @@ api = angular.module 'api', [
 ]
 
 api.factory 'Trail', ['$resource', ($resource) ->
-  $resource '/trails/:id.json'
+  resource = $resource '/trails/:id.json'
 ]

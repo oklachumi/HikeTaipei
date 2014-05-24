@@ -14,18 +14,25 @@
 #= require jquery_ujs
 #= require angular
 #= require angular-route
+#= require angular-truncate
 #= require mobile-angular-ui/dist/js/mobile-angular-ui
 #= require ./api
 #= require ./home_controllers
+#= require ./trail_controllers
 
 app = angular.module 'HikeTaipei', [
   "ngRoute"
   "mobile-angular-ui"
+  "truncate"
   "api"
   "homeControllers"
+  "trailControllers"
 ]
 
 app.config ['$routeProvider', ($routeProvider) ->
   $routeProvider.when '/', templateUrl: "<%= asset_path("home.html") %>" , controller: 'HomeCtrl'
+  $routeProvider.when '/trails/:id',
+    templateUrl: "<%= asset_path("trail.html") %>"
+    controller: 'TrailCtrl'
   $routeProvider.when '/about', templateUrl: "<%= asset_path("about.html") %>"
 ]
