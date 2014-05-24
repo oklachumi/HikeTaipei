@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @landscape.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @landscape.description %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @landscape.photo %>
+</p>
+
+<%= link_to 'Edit', edit_trail_landscape_path(@trail, @landscape) %> |
+<%= link_to 'Back', trail_landscapes_path(@trail) %>

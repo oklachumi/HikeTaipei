@@ -11,17 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140524042228) do
+ActiveRecord::Schema.define(version: 20140524044500) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "names", force: true do |t|
-    t.text     "introduction"
-    t.string   "location"
+  create_table "landscapes", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "photo"
+    t.integer  "trail_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "landscapes", ["trail_id"], name: "index_landscapes_on_trail_id", using: :btree
 
   create_table "trails", force: true do |t|
     t.string   "name"

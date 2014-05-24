@@ -15,5 +15,7 @@
   <%= @trail.location %>
 </p>
 
+<%= link_to 'Landsacpe list', trail_landscapes_path(@trail) %>
+<br />
 <%= link_to 'Edit', edit_trail_path(@trail) %> |
 <%= link_to 'Back', trails_path %>
