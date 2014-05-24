@@ -1,4 +1,4 @@
-<%= form_for([@trail, @landscape]) do |f| %>
+<%= form_for([@trail, @landscape], :html => {:multipart => true}) do |f| %>
   <% if @landscape.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@landscape.errors.count, "error") %> prohibited this landscape from being saved:</h2>
@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :photo %><br>
-    <%= f.text_field :photo %>
+    <%= f.file_field :photo %>
   </div>
   <div class="actions">
     <%= f.submit %>

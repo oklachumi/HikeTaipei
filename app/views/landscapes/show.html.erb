@@ -10,10 +10,13 @@
   <%= @landscape.description %>
 </p>
 
-<p>
-  <strong>Photo:</strong>
-  <%= @landscape.photo %>
-</p>
+<% if @landscape.photo %>
+  <p>
+	  <strong>Photo:</strong><br>
+    <%= image_tag @landscape.photo %>
+  </p>
+<% end %>
+
 
 <%= link_to 'Edit', edit_trail_landscape_path(@trail, @landscape) %> |
 <%= link_to 'Back', trail_landscapes_path(@trail) %>
