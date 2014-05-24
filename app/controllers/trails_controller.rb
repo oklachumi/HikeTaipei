@@ -1,4 +1,4 @@
-class TrailsController < ApplicationController
+class TrailsController < BackendController
   before_action :set_trail, only: [:show, :edit, :update, :destroy]
 
   # GET /trails

@@ -1,4 +1,4 @@
-class LandscapesController < ApplicationController
+class LandscapesController < BackendController
   before_action :set_trail
   before_action :set_landscape, only: [:show, :edit, :update, :destroy]
 

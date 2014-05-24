@@ -38,7 +38,7 @@ gem 'rails_12factor'
 gem 'carrierwave'
 gem 'fog', '~> 1.3.1'
 gem 'geokit-rails'
-gem 'angularjs-rails'
+gem "bower-rails", "~> 0.7.3"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
