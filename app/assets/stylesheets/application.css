@@ -11,3 +11,9 @@
  *= require mobile-angular-ui/dist/css/mobile-angular-ui-base
  *= require mobile-angular-ui/dist/css/mobile-angular-ui-desktop
  */
+
+@media (min-width: 992px) {
+  .navbar-brand-center {
+    text-align: center;
+  }
+}
