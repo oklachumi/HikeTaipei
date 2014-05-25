@@ -23,6 +23,12 @@
           {{trail.introduction}}
         </p>
       </div>
+
+      <div class="list-group-item" ng-if="map">
+        <google-map center="map.center" zoom="map.zoom">
+          <marker coords="map.center"></marker>
+        </google-map>
+      </div>
     </div>
   </div>
 </div>

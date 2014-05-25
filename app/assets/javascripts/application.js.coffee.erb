@@ -12,9 +12,11 @@
 #
 #= require jquery
 #= require jquery_ujs
+#= require underscore
 #= require angular
 #= require angular-route
 #= require angular-truncate
+#= require angular-google-maps
 #= require mobile-angular-ui/dist/js/mobile-angular-ui
 #= require ./api
 #= require ./home_controllers
@@ -24,6 +26,8 @@ app = angular.module 'HikeTaipei', [
   "ngRoute"
   "mobile-angular-ui"
   "truncate"
+  "google-maps"
+
   "api"
   "homeControllers"
   "trailControllers"

@@ -17,3 +17,9 @@
     text-align: center;
   }
 }
+
+.angular-google-map-container { height: 400px; }
+
+img {
+  max-width: none;
+}
