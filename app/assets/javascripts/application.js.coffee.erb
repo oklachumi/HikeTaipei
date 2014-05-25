@@ -46,3 +46,8 @@ app.config ['$routeProvider', ($routeProvider) ->
   $routeProvider.when '/notice', templateUrl: "<%= asset_path("notice.html") %>"
   # $routeProvider.when '/about', templateUrl: "<%= asset_path("about.html") %>"
 ]
+
+window.onload = ->
+  setTimeout ->
+    window.scrollTo(0, 1)
+  , 100

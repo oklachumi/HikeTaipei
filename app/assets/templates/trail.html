@@ -30,7 +30,8 @@
         </google-map>
       </div>
 
-      <div class="list-group-item" ng-if="trail.weather_url">
+      <div class="list-group-item" ng-if="trail.weather_url"
+        style="-webkit-overflow-scrolling:touch; overflow: auto;">
         <iframe ng-src="{{trail.weather_url}}" frameborder="0" width="100%"></iframe>
       </div>
     </div>
