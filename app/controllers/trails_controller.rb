@@ -75,6 +75,6 @@ class TrailsController < BackendController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def trail_params
-      params.require(:trail).permit(:name, :introduction, :location, :lat, :lng, :reference_link)
+      params.require(:trail).permit(:name, :introduction, :location, :lat, :lng, :reference_link, :weather_url)
     end
 end

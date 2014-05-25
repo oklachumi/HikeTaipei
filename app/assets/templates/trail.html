@@ -29,6 +29,10 @@
           <marker coords="map.center"></marker>
         </google-map>
       </div>
+
+      <div class="list-group-item" ng-if="trail.weather_url">
+        <iframe ng-src="{{trail.weather_url}}" frameborder="0"></iframe>
+      </div>
     </div>
   </div>
 </div>

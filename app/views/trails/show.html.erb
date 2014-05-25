@@ -27,10 +27,15 @@
 <p>
   <strong>Reference</strong>
   <% if @trail.reference_link %>
-	<%= link_to @trail.reference_link, @trail.reference_link %>
+    <%= link_to @trail.reference_link, @trail.reference_link %>
   <% else %>
-	No link now
+    No link now
   <% end %>
+</p>
+
+<p>
+  <strong>Weather Url</strong>
+  <%= @trail.weather_url %>
 </p>
 
 <%= link_to 'Landsacpe list', trail_landscapes_path(@trail) %>
