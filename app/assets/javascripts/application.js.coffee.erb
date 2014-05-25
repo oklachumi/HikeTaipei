@@ -34,5 +34,6 @@ app.config ['$routeProvider', ($routeProvider) ->
   $routeProvider.when '/trails/:id',
     templateUrl: "<%= asset_path("trail.html") %>"
     controller: 'TrailCtrl'
-  $routeProvider.when '/about', templateUrl: "<%= asset_path("about.html") %>"
+  $routeProvider.when '/notice', templateUrl: "<%= asset_path("notice.html") %>"
+  # $routeProvider.when '/about', templateUrl: "<%= asset_path("about.html") %>"
 ]
