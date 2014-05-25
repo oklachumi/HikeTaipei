@@ -39,6 +39,7 @@ gem 'carrierwave'
 gem 'fog', '~> 1.3.1'
 gem 'geokit-rails'
 gem "bower-rails", "~> 0.7.3"
+gem 'mini_magick'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
